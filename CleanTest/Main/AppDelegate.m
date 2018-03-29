@@ -7,6 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import "LGNavigationC.h"
+#import "ViewController.h"
+
+#define ScreenSize 2
 
 @interface AppDelegate ()
 
@@ -17,6 +21,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    
+    [self.window makeKeyAndVisible];
+    ViewController *vc = [[ViewController alloc] init];
+    LGNavigationC *nav = [[LGNavigationC alloc] initWithRootViewController:vc];
+    self.window.rootViewController = nav;
+    
     return YES;
 }
 
