@@ -10,8 +10,6 @@
 #import "LGNavigationC.h"
 #import "ViewController.h"
 
-#define ScreenSize 2
-
 @interface AppDelegate ()
 
 @end
@@ -25,8 +23,8 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
     [self.window makeKeyAndVisible];
-    ViewController *vc = [[ViewController alloc] init];
-    LGNavigationC *nav = [[LGNavigationC alloc] initWithRootViewController:vc];
+    
+    LGNavigationC *nav = [[LGNavigationC alloc] initWithRootViewController:[[ViewController alloc] init]];
     self.window.rootViewController = nav;
     
     return YES;

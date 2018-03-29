@@ -43,7 +43,6 @@
             dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
                 
                 LGTitleModel *titleModel = [LGTitleModel modelWithDict:res];
-                NSLog(@"title: %@", titleModel.title);
                 
                 modelArray = [NSMutableArray arrayWithCapacity:titleModel.rows.count];
                 
